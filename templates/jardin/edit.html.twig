@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Editar Estudiante{% endblock %}
+
+{% block body %}
+<div class="container">
+
+    <h3 class="text-center">Editar Estudiante</h3>
+    <div class="container">
+        {{ form_start(form) }}
+            {{ form_widget(form) }}
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        {{ form_end(form) }}
+    </div>
+    {# mensajes de error #}
+    {% for error in form.vars.errors %}
+        <div class="alert alert-danger">{{ error.message }}</div>
+    {% endfor %}
+    
+</div>
+{% endblock %}
